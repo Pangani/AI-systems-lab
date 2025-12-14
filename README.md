@@ -7,7 +7,6 @@ This repository focuses on **applied AI engineering**, not toy projects.
 It emphasizes clean Python engineering, data pipelines, machine learning systems,
 NLP with embeddings, retrieval-augmented generation (RAG), and API-based deployment.
 
----
 
 ## 🎯 Purpose
 
@@ -23,7 +22,6 @@ By the end of this project, this repository will contain:
 - Production practices: testing, Docker, CI/CD
 - Clear documentation and architectural decisions
 
----
 
 ## 🧠 Philosophy
 
@@ -37,7 +35,6 @@ This project follows a few core principles:
 Notebooks are used for exploration.
 All reusable logic lives in structured Python modules.
 
----
 
 ## 🏗️ Repository Structure
 
