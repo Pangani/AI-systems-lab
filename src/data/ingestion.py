@@ -21,5 +21,6 @@ def save_raw_data(df: pd.DataFrame, filename: str) -> None:
     """Save raw data to the raw data directory."""
     ensure_dir(RAW_DATA_DIR)
     output_path = RAW_DATA_DIR / filename
+    logger.info(f"Data shape: {df.shape}")
     df.to_csv(output_path, index=False)
     logger.info(f"Saved raw data to {output_path}")
