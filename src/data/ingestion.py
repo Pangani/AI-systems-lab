@@ -3,6 +3,7 @@ from pathlib import Path
 from src.core.logging import setup_logging
 from src.core.utils import ensure_dir
 from src.core.config import RAW_DATA_DIR
+from src.core.config import PROCESSED_DATA_DIR
 
 logger = setup_logging()
 
@@ -24,3 +25,12 @@ def save_raw_data(df: pd.DataFrame, filename: str) -> None:
     logger.info(f"Data shape: {df.shape}")
     df.to_csv(output_path, index=False)
     logger.info(f"Saved raw data to {output_path}")
+
+def save_processed_data(df, filename: str) -> None:
+    """
+    Save processed data to the processed data directory.
+    """
+    ensure_dir(PROCESSED_DATA_DIR)
+    output_path = PROCESSED_DATA_DIR / filename
+    df.to_csv(output_path, index=False)
+    logger.info(f"Saved processed data to {output_path}")
